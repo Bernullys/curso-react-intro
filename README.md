@@ -73,3 +73,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+03/07/2023 (las notas que hago por clase estaran aqui y en los archivos)
+
+¿Que es un componente? 
+
+Vamos a ver:
+    Como trabajar con componentes.
+    Cual es la diferencia de los componentes con los elementos de react.
+    Y como estos elementos son distintos pero terminan transformandose en etiquetas html.
+
+Cuando estemos mas preparados, enseñaran commo se configura un proyecto en react desde cero.
+
+En el archivo index.html se coloca un div con id= "root" que es donde react renderizara toda la aplicación.
+El archivo robots.txt indica a que se le puede hacer web scraping --- (esto es otro tema y por ahora quedara ahi)
+EL archivo manifest.jason es para que tome los estilos si es que esta offline la aplicación.
+
+La sintaxis que esta dentro del archivo app.js  que parece html en realidad es jsx. Por ejemplo class es className.
+Mas adelante se convertira en html.
+
+Los componentes se tienen que exportar al index.js. Por eso si hacemos un nuevo componente lo podemos insertar dentro del comonente que se exporta pero como una etiqueta.
+
+Resumen:
+    Los componentes se crean(como funciones y con UpperCamelCase).
+    Despues los componentes se llaman dentro de el componente exportado. Utilizando la sintaxis como de etiqueta html.
+    Para renderizar (el componente exportado con sus elementos y otros componentes dentro) se utiliza el codigo que aparece en el index.js
+    Los componentes reciben props, propiedades a diferencia de las funciones que reciben parametros, pero no es lo mismo. Ejemplo:
+        
+        function TodoItem(props) {
+            return (
+                <li>
+                <span>V</span>
+                <p>Llorar al monte</p>
+                <span>X</span>
+                </li>
+            );
+
+    Y asi se envian las props:
+
+        <TodoItem
+        completed={3}
+        total={5}
+        />
+
+        Ojo: so propiedades, no atributos.
+
+    Al final los elementos son los que se terminan transformando en html una vez que pasan por la "fabrica" de renderizado React.js.

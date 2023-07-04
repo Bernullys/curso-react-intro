@@ -1,13 +1,19 @@
 import logo from './platzi.webp';
 import './App.css';
 
-function App() {
+function App() { // esta funcion es un componente de react (los componentes usan UpperCamelCase)
   return (
-    <div className="App">
+// todo lo que retorna un componente son los elementos
+     <div className="App">     
+
+     <TodoItem />
+     <TodoItem />
+     <TodoItem />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edita el archivo <code>src/App.js</code> y guarda para recargar.
+          Edita el archivo <code>src/App.js</code> y guarda para recargar. 
         </p>
         <a
           className="App-link"
@@ -15,10 +21,22 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Let's learn React
         </a>
       </header>
     </div>
+  );
+}
+
+// crear otro componente:
+
+function TodoItem() {
+  return (
+    <li>
+      <span>V</span>
+      <p>Llorar al monte</p>
+      <span>X</span>
+    </li>
   );
 }
 
