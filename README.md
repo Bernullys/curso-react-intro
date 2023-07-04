@@ -120,3 +120,22 @@ Resumen:
         Ojo: so propiedades, no atributos.
 
     Al final los elementos son los que se terminan transformando en html una vez que pasan por la "fabrica" de renderizado React.js.
+
+
+
+    Componentes de TODO Machine
+
+    En esta clase se quiere llegar a una vista que tenga:
+
+    Un texto que diga cuantos TODO has completado de los que tienes pendientes.
+    Un input.
+    Tres listas que tengan:
+        V por check
+        Un texto del TODO
+        X por borrar
+    Y abajo a la derecha un boton para crear TODOs
+
+    Para esto primero se crea la estructura con los componentes y despues se crean los elementos que los definan.
+    Pero los componentes se crean aparte (uno por archivo.js). Por lo tanto hay que importarlos al App.js. Al exportarlos es mejor utilizar export por nombre y no por default, asi se evitan errores.
+
+    Ojo: ver como se hizo para que en un componente que contiene otro componente se le colocan props y como se llaman (en el archivo TodoListContainer).
