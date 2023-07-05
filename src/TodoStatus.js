@@ -1,8 +1,8 @@
 
-function TodoStatus() {
+function TodoStatus( { todoDone, todoTotal }) {
     return (
         <h1>
-        Has completado 3 de 5 TODO's
+            Has completado {todoDone} de {todoTotal} TODO's
         </h1>
     );
 }

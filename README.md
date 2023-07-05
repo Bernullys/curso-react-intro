@@ -77,7 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 03/07/2023 (las notas que hago por clase estaran aqui y en los archivos)
 
-¿Que es un componente? 
+Clase: ¿Que es un componente? 
 
 Vamos a ver:
     Como trabajar con componentes.
@@ -123,7 +123,7 @@ Resumen:
 
 
 
-    Componentes de TODO Machine
+Clase: Componentes de TODO Machine
 
     En esta clase se quiere llegar a una vista que tenga:
 
@@ -139,3 +139,35 @@ Resumen:
     Pero los componentes se crean aparte (uno por archivo.js). Por lo tanto hay que importarlos al App.js. Al exportarlos es mejor utilizar export por nombre y no por default, asi se evitan errores.
 
     Ojo: ver como se hizo para que en un componente que contiene otro componente se le colocan props y como se llaman (en el archivo TodoListContainer).
+
+
+
+04/07/23
+
+Clase: ¿Como se comunican los componentes? Props y atributos
+
+En esta clase van a cambiar los TODO's completados de los totales.
+Ademas se van a renderizar los TODO's items de acuerdo a lo que se escriban.
+
+Ahora se va a trabajar con las Props. Primero en el TodoStatus.js, vamos a hacer que sean dinamicas las cantidades.
+Como a las funciones les ponemos parametros, a los componentes les ponemos props. Las props son objetos y se pueden escribir directamente props y despues definir las que queramos con props.algo, props.otracosa. Despues las props dentro del componente se colocan dentro de {} para que lo entienda js.
+Ahora para enviar los valores de los props, se hacen desde donde tenemos la estructura, en el componente, dandole propiedades (como en html le damos atributos a las etiquetas).
+React no muestra las props que le damos cuando renderiza.
+A los elementos en react se le pueden poner atributos que se convertiran en atributos html.
+
+React transforma todo lo que esta dentro de un componente en la propiedad childern. Como se hizo con el TodoListContainer que tiene como children a los TodoItems.
+
+Para no estar metiendo div cada vez que se mete un fragmento de la aplicación --> tiene que estar dentro de un paquete pero en este caso utilizamos la herramienta React.Fragment. Este React.Fragment es invisible en el html. Ojo: para trabajar con esta herramienta, hay que importar React from "react".
+
+Ahora vamos a renderizar arrays.
+En este array vamos a crear objetos que representaran las acciones en los Todos. Es decir cada tarea sera un objeto dentro de este array que tiene dos propiedades: text y completed.
+Por cada objeto dentro del array vamos a renderizar un TodoItem.
+Para eso, llamamos al array y creamos un nuevo array con map. Pero a cada objeto hay que darle una key, osea a cada TodoItem hay que darle una key diferente y una propiedad con el texto.
+Tambien para que cambie el texto en cada todo, hay que insertarle props a TodoItem.
+Se hace lo mismo con el completed.
+
+De esta forma se comunican los componentes utilizando propiedades. 
+
+
+
+

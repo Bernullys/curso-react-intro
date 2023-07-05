@@ -1,7 +1,7 @@
-function TodoListContainer(props) {
+function TodoListContainer({ children }) {
     return (
         <ul>
-            {props.children}
+            {children}
         </ul>
     );
 }
